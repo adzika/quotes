@@ -26,5 +26,6 @@
    margin-right: auto;
    display: flex;
    margin-top: 20px;
+   margin-bottom: 50px;
  }
 </style>

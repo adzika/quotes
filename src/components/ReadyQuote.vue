@@ -1,11 +1,6 @@
 <template>
-  <div class="container">
-    <div class="form">
-      <label for="quoteGenerator">Quote</label>
-      <textarea class="form-control" id="quoteGenerator">
-
-        </textarea>
-    </div>
+  <div>
+    <p>blablablabla</p>
   </div>
 </template>
 
@@ -19,6 +14,9 @@
   }
 </script>
 
-<style>
-
+<style scoped>
+  div {
+    display: grid;
+    border: 1px solid black;
+  }
 </style>
