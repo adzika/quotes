@@ -2,7 +2,7 @@
   <div class="container">
     <div class="form">
       <label for="quoteGenerator">Quote</label>
-      <textarea class="form-control" id="quoteGenerator" rows="5">
+      <textarea class="form-control" id="quoteGenerator">
 
         </textarea>
     </div>

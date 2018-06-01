@@ -1,20 +1,14 @@
 <template>
   <div>
- <div class="container">
-   <app-header></app-header>
- </div>
+    <div class="container">
+      <app-header></app-header>
 
-  <div class="container">
     <app-quote-maker></app-quote-maker>
-  </div>
 
-  <div class="container">
     <app-ready-quote></app-ready-quote>
-  </div>
 
-  <div class="row">
-    <app-footer></app-footer>
-  </div>
+        <app-footer></app-footer>
+    </div>
   </div>
 </template>
 

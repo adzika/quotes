@@ -1,6 +1,5 @@
 <template>
   <div class="component">
-    <p>Quote</p>
     <div class="container">
       <div class="form">
         <label for="quoteGenerator">Quote</label>
@@ -9,7 +8,9 @@
         </textarea>
       </div>
     </div>
-    <button>Add Quote</button>
+    <div>
+      <button class="btn btn-primary">Add Quote</button>
+    </div>
   </div>
 </template>
 
@@ -19,6 +20,11 @@
   }
 </script>
 
-<style>
-
+<style scoped>
+ .btn {
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   margin-top: 20px;
+ }
 </style>
