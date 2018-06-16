@@ -3,7 +3,7 @@
      <p>Quotes Added</p>
      <div class="progress">
        <div class="progress-bar" role="progressbar"
-            :style="{width: numberOfQuotes}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ numberOfQuotes }}</div>
+            :style="{width: numberOfQuotes * 10 + '%'}">{{ numberOfQuotes }}</div>
      </div>
    </div>
 </template>
