@@ -25,7 +25,6 @@
     },
     methods: {
       writeQuote() {
-        console.log(this.readyQuote);
         eventBus.quoteWritten(this.readyQuote);
       }
     },
