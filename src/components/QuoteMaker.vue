@@ -4,30 +4,28 @@
       <div class="form">
         <label for="quoteGenerator">Quote</label>
         <textarea class="form-control" id="quoteGenerator" rows="5" v-model="readyQuote">
-
         </textarea>
       </div>
     </div>
     <div>
-      <button class="btn btn-primary" @click="writeQuote">Add Quote</button>
+      <button class="btn btn-primary" @click="addReadyQuote">Add Quote</button>
     </div>
   </div>
 </template>
 
 <script>
-  import { eventBus } from "../main";
-
   export default {
+    props: ['addQuote'],
     data: function() {
       return {
-        readyQuote: ""
+        readyQuote: ''
       }
     },
     methods: {
-      writeQuote() {
-        eventBus.quoteWritten(this.readyQuote);
+      addReadyQuote() {
+        this.addQuote(this.readyQuote);
       }
-    },
+    }
   }
 </script>
 

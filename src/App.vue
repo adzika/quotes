@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="container">
-      <app-header></app-header>
+      <app-header :numberOfQuotes="listOfQuotes.length"></app-header>
 
-    <app-quote-maker></app-quote-maker>
+    <app-quote-maker :addQuote = "addQuote"></app-quote-maker>
 
-    <app-ready-quote></app-ready-quote>
+    <app-ready-quote :listOfQuotes="listOfQuotes"></app-ready-quote>
 
         <app-footer></app-footer>
     </div>
@@ -19,6 +19,16 @@
   import Footer from './components/Footer.vue'
 
   export default {
+    data: function() {
+      return {
+        listOfQuotes: ["quote1"]
+      }
+    },
+    methods: {
+      addQuote(quote) {
+        this.listOfQuotes.push(quote);
+      }
+    },
     components: {
       'app-header': Header,
       'app-quote-maker': QuoteMaker,

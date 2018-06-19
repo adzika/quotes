@@ -9,18 +9,8 @@
 </template>
 
 <script>
-  import { eventBus } from "../main";
 
   export default {
-    data: function () {
-      return {
-        numberOfQuotes: 0
-      }
-    },
-    created() {
-        eventBus.$on('quoteReady', (quote) => {
-          this.numberOfQuotes++;
-        });
-    }
+    props: ['numberOfQuotes'],
   }
 </script>

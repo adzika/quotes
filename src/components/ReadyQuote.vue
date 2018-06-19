@@ -9,23 +9,8 @@
 </template>
 
 <script>
-  import QuoteMaker from '../components/QuoteMaker'
-  import { eventBus } from "../main";
-
   export default {
-    data: function() {
-      return {
-        listOfQuotes: [""]
-      }
-    },
-    components: {
-      appQuoteMaker:QuoteMaker
-    },
-    created() {
-      eventBus.$on('quoteReady', (quote) => {
-        this.listOfQuotes.push(quote);
-      });
-    }
+    props: ['listOfQuotes'],
   }
 </script>
 
