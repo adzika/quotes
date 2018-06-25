@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card" v-for="text in listOfQuotes">
+    <div class="card" @click="deleteQuote(text)" v-for="text in listOfQuotes">
       <div class="card-body">
         <p class="card-text">{{ text }}</p>
       </div>
@@ -11,6 +11,14 @@
 <script>
   export default {
     props: ['listOfQuotes'],
+    methods: {
+      deleteQuote(text) {
+        let index = this.listOfQuotes.indexOf(text);
+        if (index !== -1) {
+          this.listOfQuotes.splice(index, 1);
+        }
+      }
+    }
   }
 </script>
 
@@ -20,6 +28,6 @@
   }
   .card {
     width: 18rem;
-    min-height: 200px;
+    min-height: 50px;
   }
 </style>

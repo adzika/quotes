@@ -21,12 +21,14 @@
   export default {
     data: function() {
       return {
-        listOfQuotes: ["quote1"]
+        listOfQuotes: []
       }
     },
     methods: {
       addQuote(quote) {
-        this.listOfQuotes.push(quote);
+        if (this.listOfQuotes.length < 10) {
+          this.listOfQuotes.push(quote);
+        }
       }
     },
     components: {
