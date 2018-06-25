@@ -29,9 +29,15 @@
   .card {
     width: 18rem;
     min-height: 50px;
+    cursor: pointer
+  }
+  .card:hover {
+    background-color: #ffe2e2;
   }
   .card-text {
-    font-family: 'Galada', cursive;
+    font-family: 'Arizonia', cursive;
+    font-size: 24px;
+    color: #6e6e6e
   }
   .noIdea {
     display: grid;

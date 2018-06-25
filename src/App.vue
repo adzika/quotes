@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class= "container">
       <app-header :numberOfQuotes="listOfQuotes.length"></app-header>
 
     <app-quote-maker :addQuote = "addQuote"></app-quote-maker>

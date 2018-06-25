@@ -3,12 +3,12 @@
     <div class="container">
       <div class="form">
         <label for="quoteGenerator">Quote</label>
-        <textarea class="form-control" id="quoteGenerator" rows="5" v-model="readyQuote">
+        <textarea class="form-control" id="quoteGenerator" rows="3" v-model="readyQuote">
         </textarea>
       </div>
     </div>
     <div>
-      <button class="btn btn-primary" @click="addReadyQuote">Add Quote</button>
+      <button class="btn btn-primary" @click.prevent="createNew">Add Quote</button>
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@
       }
     },
     methods: {
-      addReadyQuote() {
+      createNew() {
         this.addQuote(this.readyQuote);
       }
     }

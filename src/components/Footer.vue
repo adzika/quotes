@@ -1,6 +1,6 @@
 <template>
 
-    <div class="alert alert-primary" role="alert">
+    <div class="alert alert-info" role="alert">
       Info: click on a Quote to delete it
     </div>
 
