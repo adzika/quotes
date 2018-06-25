@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="noIdea">
     <div class="card" @click="deleteQuote(text)" v-for="text in listOfQuotes">
       <div class="card-body">
         <p class="card-text">{{ text }}</p>
@@ -29,5 +29,14 @@
   .card {
     width: 18rem;
     min-height: 50px;
+  }
+  .card-text {
+    font-family: 'Galada', cursive;
+  }
+  .noIdea {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 5px;
   }
 </style>
