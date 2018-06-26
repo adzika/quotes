@@ -7,7 +7,9 @@
 
     <app-ready-quote :listOfQuotes="listOfQuotes"></app-ready-quote>
 
-        <app-footer></app-footer>
+      <div class="alert alert-info" role="alert">
+        Info: click on a Quote to delete it
+      </div>
     </div>
   </div>
 </template>
@@ -16,7 +18,6 @@
   import ReadyQuote from './components/ReadyQuote.vue';
   import QuoteMaker from './components/QuoteMaker.vue';
   import Header from './components/Header.vue';
-  import Footer from './components/Footer.vue'
 
   export default {
     data: function() {
@@ -35,11 +36,14 @@
       'app-header': Header,
       'app-quote-maker': QuoteMaker,
       'app-ready-quote': ReadyQuote,
-      'app-footer': Footer
-
     }
   }
 </script>
 
-<style>
+<style scoped>
+  .alert {
+    margin-top: 100px;
+    text-align: center;
+    color: #1618ff;
+  }
 </style>
