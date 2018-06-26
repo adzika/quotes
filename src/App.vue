@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class= "container">
-      <app-header :numberOfQuotes="listOfQuotes.length"></app-header>
+      <app-header :numberOfQuotes="listOfQuotes.length" :maxQuotes="maxQuotes"></app-header>
 
     <app-quote-maker :addQuote = "addQuote"></app-quote-maker>
 
@@ -22,12 +22,16 @@
   export default {
     data: function() {
       return {
-        listOfQuotes: []
+        listOfQuotes: [],
+        maxQuotes: 10
       }
     },
     methods: {
       addQuote(quote) {
-        if (this.listOfQuotes.length < 10) {
+        if (this.listOfQuotes.length >= this.maxQuotes) {
+          return alert('Please delete a Quote first!')
+        }
+        if (this.listOfQuotes.length < this.maxQuotes) {
           this.listOfQuotes.push(quote);
         }
       }

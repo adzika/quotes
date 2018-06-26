@@ -3,7 +3,8 @@
      <p>Quotes Added</p>
      <div class="progress">
        <div class="progress-bar" role="progressbar"
-            :style="{width: numberOfQuotes * 10 + '%'}">{{ numberOfQuotes }}/10 </div>
+            :style="{width: (numberOfQuotes/maxQuotes) * 100 + '%'}">
+         {{ numberOfQuotes }} / {{ maxQuotes }} </div>
      </div>
    </div>
 </template>
@@ -11,7 +12,7 @@
 <script>
 
   export default {
-    props: ['numberOfQuotes'],
+    props: ['numberOfQuotes', 'maxQuotes'],
   }
 </script>
 
